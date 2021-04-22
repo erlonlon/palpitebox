@@ -25,7 +25,7 @@ const Index = () => {
         </div>
 
         <div className="flex justify-center p-4 text-center ">
-          {!data && <p>Carregando...</p>}
+          {!data && <p>Carregando Cupon...</p>}
           {!error && data && data.showCoupon &&
             <p className='px-10 py-4 font-bold bg-red-500 text-white rounded-md shadow-xl '>{data.message}</p>
           }
