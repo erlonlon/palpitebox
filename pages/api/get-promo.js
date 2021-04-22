@@ -2,8 +2,12 @@ import { GoogleSpreadsheet } from 'google-spreadsheet'
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_GOOGLESPREADS)
 
-export default async (req, res) => {
+const fromBase64 = value => {
+  const buff = new Buffer.from(value, 'base64');
+  return buff.toString('asc11');
+}
 
+export default async (req, res) => {
   try {
 
     await doc.useServiceAccountAuth({
