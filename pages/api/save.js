@@ -7,6 +7,10 @@ const genCupom = () => {
   const code = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16).toUpperCase()
   return code.substr(0, 4) + '-' + code.substr(4, 4) + '-' + code.substr(8, 4)
 }
+const fromBase64 = value => {
+  const buff = Buffer.from(value, 'base64');
+  return buff.toString('ascii');
+}
 
 export default async (req, res) => {
   try {
