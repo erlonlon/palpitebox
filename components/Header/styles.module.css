@@ -1,0 +1,4 @@
+.wrapper{
+
+  @apply bg-gray-800 text-white p-4 shadow-md ;
+}
